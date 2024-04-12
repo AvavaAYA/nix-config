@@ -271,8 +271,6 @@ in {
         ./packages/gh-md-toc/gh-md-toc;
       ".local/state/nix/profile/bin/seccomp-tools".source =
         ./packages/seccomp-tools/seccomp-tools;
-      # ".local/state/nix/profile/bin/nyancat".source =
-      #   ./packages/nyancat/src/nyancat;
       ".config/neofetch/config.conf".source = ./programs/neofetch/config.conf;
     };
 

@@ -14,7 +14,8 @@ in {
     plugins = with plugins; [
       cpu
       # catppuccin # theme
-      nord
+      # nord
+      gruvbox
       copycat
       # {
       #   plugin = resurrect;
