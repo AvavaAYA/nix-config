@@ -1,7 +1,6 @@
 { lib, pkgs, ... }:
 let
-  # plugins = pkgs.tmuxPlugins // pkgs.callPackage ./custom-plugins.nix {};
-  plugins = pkgs.tmuxPlugins;
+  plugins = pkgs.tmuxPlugins // pkgs.callPackage ./custom-plugins.nix { };
   tmuxConf = lib.readFile ./default.conf;
 in {
   programs.tmux = {
@@ -13,24 +12,23 @@ in {
     keyMode = "vi";
     plugins = with plugins; [
       cpu
-      # catppuccin # theme
-      # nord
-      gruvbox
       copycat
+
       # {
-      #   plugin = resurrect;
-      #   extraConfig = "set -g @resurrect-strategy-nvim 'session'";
-      # }
-      # {
-      #   plugin = continuum;
+      #   plugin = catppuccin;
       #   extraConfig = ''
-      #     set -g @continuum-restore 'on'
-      #     set -g @continuum-save-interval '60' # minutes
+      #     set -g @catppuccin_flavour 'latte'
       #   '';
       # }
+
+      {
+        plugin = gruvbox;
+        extraConfig = ''
+          set -g @tmux-gruvbox 'dark'
+        '';
+      }
     ];
-    # shortcut = "a";
-    terminal = "screen-256color";
+    terminal = "xterm-kitty";
   };
 }
 
