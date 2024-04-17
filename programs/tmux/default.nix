@@ -6,18 +6,24 @@ in {
   programs.tmux = {
     enable = true;
     aggressiveResize = true;
-    # baseIndex = 0;
+    baseIndex = 0;
     extraConfig = tmuxConf;
     escapeTime = 0;
     keyMode = "vi";
+
     plugins = with plugins; [
       cpu
+      battery
       copycat
 
       # {
-      #   plugin = catppuccin;
+      #   plugin = dracula;
       #   extraConfig = ''
-      #     set -g @catppuccin_flavour 'latte'
+      #     set -g @dracula-show-battery false
+      #     set -g @dracula-show-powerline true
+      #     set -g @dracula-refresh-rate 10
+      #     set -g @dracula-cpu-usage-label "CPU"
+      #     set -g @dracula-cpu-display-load true
       #   '';
       # }
 
@@ -27,7 +33,9 @@ in {
           set -g @tmux-gruvbox 'dark'
         '';
       }
+
     ];
+
     terminal = "xterm-kitty";
   };
 }
