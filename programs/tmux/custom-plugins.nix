@@ -2,14 +2,14 @@
 
 let buildTmuxPlugin = pkgs.tmuxPlugins.mkTmuxPlugin;
 in {
-  gruvbox-tmux = buildTmuxPlugin {
-    pluginName = "gruvbox-tmux";
+  monokai-pro = buildTmuxPlugin {
+    pluginName = "monokai-pro";
     version = "v1.0";
     src = pkgs.fetchFromGitHub {
-      owner = "thoreinstein";
-      repo = "gruvbox-tmux";
-      rev = "e3e6e95c3ed267a37f469a1308fed5c96aba1614";
-      sha256 = "sha256-gi2yjb8iEQUFXvISPRJXKViJH8q4YqrfdwwaBnb7L20=";
+      owner = "loctvl842";
+      repo = "monokai-pro.tmux";
+      rev = "c1176717ecce54900d35d1ee9dddb2a5f4474323";
+      sha256 = "sha256-3e8jqeg35T88l+QDJp1CZRroUweKNbc5Se1lExPd4z8=";
     };
   };
 }
