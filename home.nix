@@ -192,6 +192,7 @@ let
     patchelf
     one_gadget
     qemu
+    pahole
     inputs.patch4pwn.defaultPackage.x86_64-linux
     inputs.pwndbg.packages.x86_64-linux.default
 
