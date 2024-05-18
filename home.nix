@@ -216,7 +216,6 @@ let
     hexo-cli
 
     gitleaks
-    ruby
 
     protobuf
   ];
