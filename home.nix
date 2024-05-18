@@ -30,6 +30,8 @@ let
       grpcio
       grpcio-tools
 
+      matplotlib
+
       pandas
 
       (
