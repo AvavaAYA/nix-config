@@ -111,9 +111,13 @@ let
         # lianpwn
         buildPythonPackage rec {
           pname = "lianpwn";
-          version = "0.1.0";
-          # src = /home/eastxuelian/config/lianpwn;
-          src = ./packages/lianpwn;
+          version = "0.2.2";
+          # src = ./packages/lianpwn;
+          src = fetchPypi {
+            inherit pname version;
+            sha256 = "sha256-s4f2MCi+anQ5l73OgXD25GXVjLoXbQaABqPZFe7M8Jg=";
+          };
+          propagatedBuildInputs = [ ];
           doCheck = false;
         })
     ];
