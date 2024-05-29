@@ -115,7 +115,7 @@ let
           # src = ./packages/lianpwn;
           src = fetchPypi {
             inherit pname version;
-            sha256 = "sha256-s4f2MCi+anQ5l73OgXD25GXVjLoXbQaABqPZFe7M8Jg=";
+            sha256 = "sha256-/3jesV2xeGcWENd+fupbxHQ45x4g+vp1rs/oL4dK+Gc=";
           };
           propagatedBuildInputs = [ ];
           doCheck = false;
