@@ -13,7 +13,6 @@ let
       datetime
 
       # pwn
-      wabt
       psutil
       click
       ropgadget
@@ -223,6 +222,7 @@ let
     gitleaks
 
     protobuf
+    wabt
   ];
 in {
   programs.home-manager.enable = true;
