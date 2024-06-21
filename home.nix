@@ -13,6 +13,7 @@ let
       datetime
 
       # pwn
+      wabt
       psutil
       click
       ropgadget
