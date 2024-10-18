@@ -222,6 +222,7 @@ let
 
     protobuf
     wabt
+    rubyPackages_3_1.seccomp-tools
   ];
 in {
   programs.home-manager.enable = true;
