@@ -45,6 +45,9 @@ in {
       # nix-shell ${nixConfDir}/packages/libLian/exp.nix
 
       set_proxy = ''
+        set -e all_proxy
+        set -e https_proxy
+        set -e http_proxy
         set -gx https_proxy "http://192.168.50.30:6152"
         set -gx http_proxy "http://192.168.50.30:6152"
       '';
