@@ -23,13 +23,13 @@ let
 
       # gpg.enable = true;
 
-      # htop = {
-      #   enable = true;
-      #   settings = {
-      #     sort_direction = true;
-      #     sort_key = "PERCENT_CPU";
-      #   };
-      # };
+      htop = {
+        enable = true;
+        settings = {
+          sort_direction = true;
+          sort_key = "PERCENT_CPU";
+        };
+      };
 
       jq.enable = true;
 

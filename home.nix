@@ -280,6 +280,8 @@ in {
       ".local/state/nix/profile/bin/seccomp-tools".source =
         ./packages/seccomp-tools/seccomp-tools;
       ".config/neofetch/config.conf".source = ./programs/neofetch/config.conf;
+      ".ipython/profile_default/ipython_config.py".source =
+        ./programs/ipython/config.py;
     };
 
     sessionVariables = {
