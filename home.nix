@@ -111,10 +111,10 @@ let
         # lianpwn
         buildPythonPackage rec {
           pname = "lianpwn";
-          version = "1.0.4";
+          version = "1.0.5";
           src = fetchPypi {
             inherit pname version;
-            sha256 = "sha256-UH7ij48mC4/koIEfvOHzbkPUz6KWb6b4S1SrXSakAzc=";
+            sha256 = "sha256-o87+xFX0pgAMsNqrlNG7TejUAXNKvuy8ivpu6pjnEkA=";
           };
           propagatedBuildInputs = [ ];
           doCheck = false;
