@@ -111,10 +111,10 @@ let
         # lianpwn
         buildPythonPackage rec {
           pname = "lianpwn";
-          version = "1.0.6";
+          version = "1.0.7";
           src = fetchPypi {
             inherit pname version;
-            sha256 = "sha256-TBqnhrMU7wHRfeJCH0r+IuGvS8GOgqKafdwpBMdXEDA=";
+            sha256 = "sha256-x/PhVxcZ/osF60sRp46gTrFTpyF8S4SuHWISb72lh0Q=";
           };
           propagatedBuildInputs = [ ];
           doCheck = false;
@@ -164,6 +164,8 @@ let
     zstd
     gnupg
     zoxide
+    kitty
+    yazi
 
     nix-output-monitor
     any-nix-shell

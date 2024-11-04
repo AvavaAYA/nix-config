@@ -21,6 +21,7 @@ in {
       ll = "eza -al";
       la = "eza -al";
       objdump = "objdump -M intel";
+      icat = "kitty +kitten icat";
       sudo = "sudo -E";
       shell_kernel = "nix-shell /etc/nixos/packages/libLian/exp.nix";
       shell_wget = "nix-shell ${confDir}/pwn-scripts/nixos-conf/wget_shell.nix";
