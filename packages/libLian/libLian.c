@@ -1,29 +1,36 @@
 // author: @eastXueLian
 #include "libLian.h"
 
-
 size_t user_cs, user_ss, user_rflags, user_sp;
 void save_status() {
-  __asm__("mov user_cs, cs;"
-          "mov user_ss, ss;"
-          "mov user_sp, rsp;"
-          "pushf;"
-          "pop user_rflags;");
-  info("Status has been saved.");
+    __asm__("mov user_cs, cs;"
+            "mov user_ss, ss;"
+            "mov user_sp, rsp;"
+            "pushf;"
+            "pop user_rflags;");
+    info("Status has been saved.");
+}
+
+void errExit(const char *fmt, ...) {
+    va_list args;
+    va_start(args, fmt);
+    fprintf(stdout, COLOR_RED "[!] " COLOR_RESET);
+    vfprintf(stdout, fmt, args);
+    va_end(args);
+    exit(1);
 }
 
 void get_shell(void) {
-  info("Trying to get root shell.");
-  if (getuid()) {
-    errExit("Failed to get root shell.");
-  }
-  success("Successfully get root shell.");
-  system("/bin/sh");
+    info("Trying to get root shell.");
+    if (getuid()) {
+        errExit("Failed to get root shell.");
+    }
+    success("Successfully get root shell.");
+    system("/bin/sh");
 }
 
 /* to run the exp on the specific core only */
-void bind_cpu(int core)
-{
+void bind_cpu(int core) {
     cpu_set_t cpu_set;
 
     CPU_ZERO(&cpu_set);

@@ -27,7 +27,7 @@
   time.timeZone = "Asia/Shanghai";
 
   # Configure network proxy if necessary
-  networking.proxy.default = "socks5://192.168.50.30:6153";
+  networking.proxy.default = "socks5://192.168.50.31:6153";
   networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
@@ -103,7 +103,7 @@
     proxies = {
       myproxy = {
         type = "socks5";
-        host = "192.168.50.30";
+        host = "192.168.50.31";
         port = 6153;
       };
     };
