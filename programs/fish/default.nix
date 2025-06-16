@@ -49,8 +49,8 @@ in {
         set -e all_proxy
         set -e https_proxy
         set -e http_proxy
-        set -gx https_proxy "http://192.168.50.32:6152"
-        set -gx http_proxy "http://192.168.50.32:6152"
+        set -gx https_proxy "http://192.168.50.30:6152"
+        set -gx http_proxy "http://192.168.50.30:6152"
       '';
       unset_proxy = ''
         set -e all_proxy

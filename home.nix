@@ -270,7 +270,7 @@ in {
 
         [proxy]
         type = socks5
-        host = 192.168.50.32
+        host = 192.168.50.30
         port = 6153
         rdns = True
       '';
